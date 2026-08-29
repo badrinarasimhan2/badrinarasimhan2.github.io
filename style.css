@@ -614,3 +614,121 @@ footer p {
     flex-direction: column;
   }
 }
+
+
+/* V2 refinements */
+.hero h1 {
+  font-size: clamp(3.0rem, 5.2vw, 5.25rem);
+  line-height: 1.00;
+  max-width: 760px;
+}
+
+.hero-subline {
+  max-width: 700px;
+  margin: -4px 0 22px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: #343a37;
+}
+
+.theme-card {
+  min-height: 260px;
+  padding: 30px 34px;
+}
+
+.theme-card h3 {
+  margin: 34px 0 12px;
+}
+
+.theme-tag {
+  bottom: 24px;
+}
+
+.theme-glyph {
+  position: absolute;
+  top: 26px;
+  right: 30px;
+  width: 112px;
+  height: 64px;
+  opacity: .16;
+  color: var(--accent);
+}
+
+.theme-glyph i {
+  position: absolute;
+  display: block;
+  border: 2px solid currentColor;
+}
+
+/* immune: matrix line + two interacting cells */
+.glyph-immune:before,
+.glyph-immune:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 68px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+.glyph-immune:before { top: 10px; }
+.glyph-immune:after { top: 27px; }
+.glyph-immune i:nth-child(1),
+.glyph-immune i:nth-child(2) {
+  border-radius: 50%;
+  background: currentColor;
+}
+.glyph-immune i:nth-child(1) { width: 23px; height: 23px; right: 20px; top: 12px; }
+.glyph-immune i:nth-child(2) { width: 16px; height: 16px; right: 0; top: 30px; }
+.glyph-immune i:nth-child(3) { width: 22px; border-width: 1px 0 0; right: 11px; top: 31px; transform: rotate(16deg); }
+
+/* organization: dispersed to clustered */
+.glyph-org i {
+  border-radius: 50%;
+  background: currentColor;
+}
+.glyph-org i:nth-child(1) { width: 14px; height: 14px; left: 2px; top: 28px; }
+.glyph-org i:nth-child(2) { width: 17px; height: 17px; left: 33px; top: 16px; }
+.glyph-org i:nth-child(3) { width: 22px; height: 22px; right: 24px; top: 20px; }
+.glyph-org i:nth-child(4) { width: 22px; height: 22px; right: 5px; top: 32px; }
+
+/* material: changing network */
+.glyph-material i {
+  width: 78px;
+  height: 24px;
+  left: 14px;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+.glyph-material i:nth-child(1) { top: 7px; }
+.glyph-material i:nth-child(2) { top: 20px; transform: rotate(8deg); }
+.glyph-material i:nth-child(3) { top: 34px; transform: rotate(-4deg); }
+
+/* state: three-state trajectory */
+.glyph-state:before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  top: 31px;
+  border-top: 2px solid currentColor;
+}
+.glyph-state i {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: currentColor;
+  top: 21px;
+}
+.glyph-state i:nth-child(1) { left: 3px; opacity: .65; }
+.glyph-state i:nth-child(2) { left: 46px; opacity: .8; transform: rotate(45deg); }
+.glyph-state i:nth-child(3) { right: 3px; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 3rem; }
+  .hero-subline { font-size: 1.35rem; }
+  .theme-glyph { width: 90px; right: 20px; }
+}
