@@ -1355,3 +1355,73 @@ body { background:#080a0a; color:var(--ink); }
   .interaction-mark .dot-c { left:59px; top:28px; width:6px; height:6px; }
   .interaction-theme strong { font-size:clamp(2rem,10vw,3rem); }
 }
+
+/* Version 8: Interaction Bioengineering hero, readable light sections, reciprocal-state schematic */
+.hero-copy > .interaction-theme { display:none; }
+.hero-identity { display:flex; align-items:center; gap:2rem; margin:1.1rem 0 .8rem; }
+.hero-identity h1 { margin:0; font-size:clamp(4.4rem,7.5vw,8.4rem); line-height:.84; letter-spacing:-.07em; }
+.hero-mark { width:190px; height:128px; flex:0 0 190px; }
+.hero-mark i { width:182px; height:53px; border-width:6px; }
+.hero-mark .dot-a { left:50px; top:58px; width:13px; height:13px; }
+.hero-mark .dot-b { left:89px; top:54px; width:16px; height:16px; }
+.hero-mark .dot-c { left:132px; top:59px; width:11px; height:11px; }
+.hero-subline { color:#d7ddda !important; font-size:clamp(1.4rem,2vw,2rem) !important; max-width:760px; }
+.hero-text { color:#bfc7c3; }
+
+/* Replace the previous abstract orbital graphic with a readable interaction map */
+.interaction-schematic { min-height:650px; padding:44px 38px 34px; display:grid; grid-template-rows:1fr 58px 1fr 58px 1fr auto; gap:0; border:1px solid #28302d; }
+.schematic-stage { position:relative; min-height:125px; border-left:3px solid; padding:18px 20px 16px 28px; overflow:hidden; }
+.schematic-stage > .stage-index { display:block; font-size:.68rem; letter-spacing:.16em; font-weight:800; color:#7e8984; margin-bottom:7px; }
+.schematic-stage > strong { display:block; font-family:Manrope,sans-serif; font-size:1.55rem; color:#f5f7f6; letter-spacing:-.035em; }
+.schematic-stage > small { display:block; color:#aeb7b3; margin-top:4px; font-size:.83rem; }
+.stage-matrix { border-color:var(--green); }
+.stage-cell { border-color:var(--blue); }
+.stage-multi { border-color:var(--magenta); }
+.fiber { position:absolute; right:12px; width:42%; height:28px; border:2px solid rgba(41,184,117,.48); border-left-color:transparent; border-right-color:transparent; border-radius:50%; transform:rotate(-8deg); }
+.f1 { top:22px; } .f2 { top:49px; right:24px; } .f3 { top:76px; right:7px; }
+.schematic-link { position:relative; display:flex; align-items:center; justify-content:center; gap:13px; }
+.schematic-link:before { content:""; position:absolute; left:14%; right:14%; height:1px; background:#56605c; }
+.schematic-link i { position:relative; z-index:2; font-style:normal; font-size:1.55rem; color:#d9dfdc; background:#101514; padding:0 9px; }
+.schematic-link b { position:relative; z-index:3; width:8px; height:8px; border-radius:50%; background:#e55353; }
+.cell-symbol { position:absolute; right:52px; top:28px; width:70px; height:70px; border:2px solid rgba(39,135,200,.8); border-radius:48% 52% 56% 44% / 52% 43% 57% 48%; transform:rotate(-12deg); }
+.cell-symbol em { position:absolute; width:23px; height:23px; border-radius:50%; background:rgba(39,135,200,.78); left:23px; top:22px; }
+.migration-track { position:absolute; right:10px; bottom:17px; width:125px; border-top:1px dashed rgba(255,255,255,.42); transform:rotate(-8deg); }
+.cluster { position:absolute; right:38px; top:28px; width:112px; height:80px; }
+.cluster i { position:absolute; width:38px; height:38px; border:2px solid rgba(165,33,103,.82); border-radius:50%; }
+.cluster i:nth-child(1){left:36px;top:0}.cluster i:nth-child(2){left:8px;top:27px}.cluster i:nth-child(3){left:63px;top:27px}.cluster i:nth-child(4){left:32px;top:44px}.cluster i:nth-child(5){left:58px;top:48px;width:29px;height:29px}
+.schematic-caption { margin:18px 0 0; color:#8f9994; font-size:.78rem; line-height:1.5; }
+
+/* The light emerging-directions section stays light, but text must be high contrast. */
+.emerging-section { background:#f0f3f1; color:#151918; }
+.emerging-section .section-kicker { color:#68716d; }
+.emerging-section .section-heading h2 { color:#151918 !important; }
+.emerging-section .section-heading > p:last-child { color:#555f5a !important; }
+.emerging-section .direction-card { background:#fff; border-color:#aeb7b2; }
+.emerging-section .direction-card h3 { color:#171b19 !important; }
+.emerging-section .direction-card p { color:#4e5853 !important; }
+.emerging-section .research-loop { color:#1b201e; }
+
+/* Publication metadata: readable, secondary to the title rather than faded. */
+.publications-band .pub-row span:nth-child(2) { color:#d4dad7 !important; }
+.publications-band .pub-row span:nth-child(2) br + * { color:#d4dad7; }
+.publications-band .pub-row strong { color:#f7f9f8 !important; }
+.publications-band .pub-year { color:#b7c0bc !important; }
+/* Italicize metadata after the title via a dedicated line treatment supported by current markup. */
+.publications-band .pub-row span:nth-child(2) { font-style:italic; }
+.publications-band .pub-row span:nth-child(2) strong { font-style:normal; }
+
+@media (max-width:1000px) {
+  .hero-identity { gap:1.2rem; }
+  .hero-mark { width:132px; height:92px; flex-basis:132px; }
+  .hero-mark i { width:126px; height:38px; border-width:4px; }
+  .hero-mark .dot-a { left:35px; top:42px; width:9px; height:9px; }
+  .hero-mark .dot-b { left:62px; top:39px; width:11px; height:11px; }
+  .hero-mark .dot-c { left:91px; top:43px; width:8px; height:8px; }
+}
+@media (max-width:680px) {
+  .hero-identity { align-items:flex-start; flex-direction:column; gap:.8rem; }
+  .hero-identity h1 { font-size:clamp(3.5rem,17vw,5rem); }
+  .interaction-schematic { min-height:600px; padding:28px 22px; }
+}
+.publications-band .pub-row span:nth-child(2) { font-style:normal; }
+.publications-band .pub-meta { color:#d4dad7; font-style:italic; }
