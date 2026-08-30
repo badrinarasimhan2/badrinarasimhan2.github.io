@@ -1921,3 +1921,21 @@ body { background:#080a0a; color:var(--ink); }
     margin-bottom: 30px !important;
   }
 }
+
+
+/* ===== Version 13: cleaner hero typography ===== */
+.hero-brand-lockup h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(4.05rem, 7.05vw, 6.85rem);
+  line-height: .91;
+  letter-spacing: -.055em;
+}
+
+@media (max-width: 760px) {
+  .hero-brand-lockup h1 {
+    font-size: clamp(3.25rem, 15vw, 5rem);
+    line-height: .93;
+    letter-spacing: -.045em;
+  }
+}
