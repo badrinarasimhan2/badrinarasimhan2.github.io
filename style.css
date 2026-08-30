@@ -1939,3 +1939,224 @@ body { background:#080a0a; color:var(--ink); }
     letter-spacing: -.045em;
   }
 }
+
+
+/* ===== Version 14: global dark/light comparison switch ===== */
+.theme-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 5px 10px 5px 7px;
+  border: 1px solid #3b4340;
+  border-radius: 999px;
+  background: #111514;
+  color: #eef2f0;
+  font: 600 .76rem/1 "Inter", sans-serif;
+  cursor: pointer;
+}
+.theme-toggle-track {
+  position: relative;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  background: #313936;
+  transition: background .2s ease;
+}
+.theme-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f5f7f6;
+  transition: transform .2s ease, background .2s ease;
+}
+.theme-toggle-label { min-width: 29px; text-align: left; }
+.theme-toggle:focus-visible { outline: 2px solid #29b875; outline-offset: 3px; }
+
+/* LIGHT MODE: one coherent white website, with dark text */
+body.light-theme {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --ink: #111514;
+  --muted: #5e6763;
+  --line: #dce2df;
+  background: #ffffff !important;
+  color: #111514 !important;
+}
+
+body.light-theme .site-header {
+  background: rgba(255,255,255,.94) !important;
+  border-bottom-color: #e1e6e3 !important;
+}
+body.light-theme .brand,
+body.light-theme .nav a { color: #111514 !important; }
+body.light-theme .nav a:hover { color: #29a96f !important; }
+
+body.light-theme .theme-toggle {
+  background: #ffffff;
+  color: #111514;
+  border-color: #cfd6d2;
+}
+body.light-theme .theme-toggle-track { background: #111514; }
+body.light-theme .theme-toggle-knob {
+  transform: translateX(14px);
+  background: #ffffff;
+}
+
+/* Main surfaces */
+body.light-theme .hero-v10,
+body.light-theme .research-v10,
+body.light-theme .selected-work,
+body.light-theme .state-space-v51,
+body.light-theme .emerging-section,
+body.light-theme .expertise-section,
+body.light-theme .collaboration-band,
+body.light-theme .service-section,
+body.light-theme .publications-band,
+body.light-theme .about-section-wrap,
+body.light-theme .page-hero,
+body.light-theme .publication-section,
+body.light-theme main {
+  background: #ffffff !important;
+  color: #111514 !important;
+}
+
+/* Global typography */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme strong,
+body.light-theme .hero-brand-lockup h1,
+body.light-theme .hero-subline-v10,
+body.light-theme .state-space-v51 .state-title-row h2,
+body.light-theme .state-panel h3,
+body.light-theme .collaboration-layout h2,
+body.light-theme .publication-group-heading h2,
+body.light-theme .full-pub,
+body.light-theme .full-pub h3,
+body.light-theme .full-pub h3 a {
+  color: #111514 !important;
+}
+
+body.light-theme p,
+body.light-theme .hero-text-v10,
+body.light-theme .state-intro,
+body.light-theme .collab-lead,
+body.light-theme .collab-highlight p,
+body.light-theme .full-pub p,
+body.light-theme .full-pub .journal,
+body.light-theme .full-pub-year,
+body.light-theme .pub-row span:nth-child(2),
+body.light-theme .project-copy p,
+body.light-theme .project-card-copy p {
+  color: #5e6763 !important;
+}
+
+body.light-theme .eyebrow,
+body.light-theme .section-kicker,
+body.light-theme .work-category,
+body.light-theme .project-meta {
+  color: #747d79 !important;
+}
+
+/* Cards and structural elements */
+body.light-theme .theme-card,
+body.light-theme .direction-card,
+body.light-theme .project-card,
+body.light-theme .feature-project,
+body.light-theme .collab-project,
+body.light-theme .state-panel,
+body.light-theme .expertise-lines article {
+  background: #ffffff !important;
+  color: #111514 !important;
+  border-color: #dce2df !important;
+}
+
+body.light-theme .state-panel {
+  background: #f8faf9 !important;
+}
+body.light-theme .state-tags span {
+  background: #ffffff !important;
+  border-color: #d5ddd9 !important;
+  color: #48514d !important;
+}
+body.light-theme .state-domain,
+body.light-theme .panel-topline,
+body.light-theme .coupling-box small,
+body.light-theme .flow-bridge {
+  color: #747d79 !important;
+}
+body.light-theme .coupling-box,
+body.light-theme .state-bottomline,
+body.light-theme .discipline-chain,
+body.light-theme .service-list,
+body.light-theme .service-list > div,
+body.light-theme .pub-list,
+body.light-theme .pub-row,
+body.light-theme .full-pub-list,
+body.light-theme .full-pub {
+  border-color: #dce2df !important;
+}
+body.light-theme .coupling-box strong,
+body.light-theme .state-bottomline p,
+body.light-theme .discipline-chain span,
+body.light-theme .collab-highlight strong {
+  color: #111514 !important;
+}
+
+/* Buttons and links */
+body.light-theme .button-primary,
+body.light-theme .hero-actions .primary {
+  background: #111514 !important;
+  color: #ffffff !important;
+  border-color: #111514 !important;
+}
+body.light-theme .button-secondary,
+body.light-theme .hero-actions .secondary {
+  background: #ffffff !important;
+  color: #111514 !important;
+  border-color: #aeb7b2 !important;
+}
+body.light-theme .text-link,
+body.light-theme .pub-row,
+body.light-theme .about-links a {
+  color: #111514 !important;
+}
+
+/* Interaction logo keeps the colored interaction dots */
+body.light-theme .hero-mark-v10 i:first-child { color: #111514 !important; }
+body.light-theme .hero-mark-v10 i:nth-child(2) { color: #2787c8 !important; }
+body.light-theme .interaction-dot { background: #ef565b !important; }
+
+/* Images and pale image fields remain readable */
+body.light-theme .project-image,
+body.light-theme .collab-image {
+  background: #f4f6f5 !important;
+}
+
+/* Footer follows selected mode */
+body.light-theme footer,
+body.light-theme .site-footer {
+  background: #f5f7f6 !important;
+  color: #111514 !important;
+  border-top: 1px solid #dce2df;
+}
+body.light-theme footer p,
+body.light-theme .site-footer span,
+body.light-theme .footer-right a {
+  color: #5e6763 !important;
+}
+
+@media (max-width: 1080px) {
+  .nav-wrap { gap: 18px; }
+  .nav { gap: 17px; }
+}
+@media (max-width: 900px) {
+  .theme-toggle-label { display: none; }
+  .theme-toggle { padding-right: 7px; }
+}

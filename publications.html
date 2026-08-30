@@ -20,6 +20,10 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to light background" aria-pressed="false">
+        <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-knob"></span></span>
+        <span class="theme-toggle-label">Light</span>
+      </button>
   </div>
 </header>
 <main>
@@ -87,5 +91,34 @@
   </div>
 </section>
 </main>
-<footer class="site-footer"><div class="container"><strong>Badri Narayanan Narasimhan</strong><span>Bioengineering · Biomaterials · Mechanobiology</span></div></footer>
+<footer class="site-footer"><div class="container"><strong>Badri Narayanan Narasimhan</strong><span>Bioengineering · Biomaterials · Mechanobiology</span></div><div class="social-links"><a href="https://www.linkedin.com/in/badri-narayanan-narasimhan-9518b510/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://x.com/badz_nithin" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a></div></footer>
+
+  <script>
+    (function () {
+      const button = document.querySelector('.theme-toggle');
+      if (!button) return;
+
+      function applyTheme(light) {
+        document.body.classList.toggle('light-theme', light);
+        button.setAttribute('aria-pressed', light ? 'true' : 'false');
+        button.setAttribute('aria-label', light ? 'Switch to dark background' : 'Switch to light background');
+        const label = button.querySelector('.theme-toggle-label');
+        if (label) label.textContent = light ? 'Dark' : 'Light';
+      }
+
+      let light = false;
+      try {
+        light = localStorage.getItem('badri-site-theme') === 'light';
+      } catch (e) {}
+      applyTheme(light);
+
+      button.addEventListener('click', function () {
+        const nextLight = !document.body.classList.contains('light-theme');
+        applyTheme(nextLight);
+        try {
+          localStorage.setItem('badri-site-theme', nextLight ? 'light' : 'dark');
+        } catch (e) {}
+      });
+    })();
+  </script>
 </body></html>

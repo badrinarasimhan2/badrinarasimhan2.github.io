@@ -25,6 +25,10 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to light background" aria-pressed="false">
+        <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-knob"></span></span>
+        <span class="theme-toggle-label">Light</span>
+      </button>
     </div>
   </header>
 
@@ -45,7 +49,7 @@
           <h1><span>Interaction</span><span>Bioengineering</span></h1>
         </div>
 
-        <p class="hero-subline hero-subline-v10">Engineering and decoding interactions across scales.</p>
+        <p class="hero-subline hero-subline-v10">Quantifying and modeling interactions across scales.</p>
         <p class="hero-text hero-text-v10">
           I study how interactions among extracellular matrix remodeling, adhesion, mechanics,
           and biological systems shape cell migration, cellular behavior, multicellular organization,
@@ -423,8 +427,40 @@
       <div class="footer-right">
         <a href="mailto:bnarasimhan@ucsd.edu">Email</a>
         <a href="https://github.com/badrinarasimhan2">GitHub</a>
-      </div>
+      
+          <a href="https://www.linkedin.com/in/badri-narayanan-narasimhan-9518b510/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://x.com/badz_nithin" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a>
+        </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const button = document.querySelector('.theme-toggle');
+      if (!button) return;
+
+      function applyTheme(light) {
+        document.body.classList.toggle('light-theme', light);
+        button.setAttribute('aria-pressed', light ? 'true' : 'false');
+        button.setAttribute('aria-label', light ? 'Switch to dark background' : 'Switch to light background');
+        const label = button.querySelector('.theme-toggle-label');
+        if (label) label.textContent = light ? 'Dark' : 'Light';
+      }
+
+      let light = false;
+      try {
+        light = localStorage.getItem('badri-site-theme') === 'light';
+      } catch (e) {}
+      applyTheme(light);
+
+      button.addEventListener('click', function () {
+        const nextLight = !document.body.classList.contains('light-theme');
+        applyTheme(nextLight);
+        try {
+          localStorage.setItem('badri-site-theme', nextLight ? 'light' : 'dark');
+        } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>
