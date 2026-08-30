@@ -2390,8 +2390,188 @@ body.light-theme .hero-mark-v10.distributed-logo .dot-c {
 body.light-theme .hero-mark-v10.distributed-logo .dot-h {
   background: #9a78d2 !important;
 }
-.hero-subline-v10 {
-  font-size: 1.7rem;
-  font-style: italic;
-  font-weight: 400;
+
+
+/* ===== Version 20: general-audience research themes + research outcomes ===== */
+.plain-research-section {
+  padding: 112px 0;
+  background: #0c0f0e;
+  color: #f4f6f5;
+  border-top: 1px solid #252b28;
+}
+.plain-research-heading,
+.build-heading {
+  max-width: 900px;
+  margin-bottom: 52px;
+}
+.plain-research-heading h2,
+.build-heading h2 {
+  margin: 8px 0 18px;
+  max-width: 850px;
+}
+.plain-research-heading > p:last-child,
+.build-heading > p:last-child {
+  max-width: 790px;
+  color: #b9c1bd;
+  line-height: 1.7;
+}
+.plain-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.plain-theme-card {
+  position: relative;
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid #303734;
+  border-radius: 18px;
+  background: #111513;
+}
+.plain-theme-number,
+.build-index {
+  display: block;
+  margin-bottom: 26px;
+  color: #7d8782;
+  font: 600 .74rem/1 "Inter", sans-serif;
+  letter-spacing: .12em;
+}
+.plain-theme-card h3,
+.build-item h3 {
+  margin: 0 0 16px;
+  color: #f6f8f7;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+.plain-theme-question {
+  margin: 0 0 17px;
+  color: #e7ebe9 !important;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.plain-theme-card > p:not(.plain-theme-question) {
+  color: #aeb7b2;
+  line-height: 1.65;
+}
+.plain-theme-impact {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 16px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #303734;
+}
+.plain-theme-impact strong {
+  color: #31b97a;
+  font-size: .82rem;
+}
+.plain-theme-impact span {
+  color: #c6ceca;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.build-section {
+  padding: 108px 0 116px;
+  background: #111513;
+  color: #f4f6f5;
+  border-top: 1px solid #252b28;
+  border-bottom: 1px solid #252b28;
+}
+.build-flow {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+.build-item {
+  min-width: 0;
+  padding: 26px 24px 28px;
+  border-top: 2px solid #3c4742;
+}
+.build-item:nth-of-type(1) { border-top-color: #31b97a; }
+.build-item:nth-of-type(2) { border-top-color: #2d91d1; }
+.build-item:nth-of-type(3) { border-top-color: #ef5357; }
+.build-item:nth-of-type(4) { border-top-color: #9a78d2; }
+.build-item p {
+  margin: 0;
+  color: #aeb7b2;
+  line-height: 1.58;
+  font-size: .94rem;
+}
+.build-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #69736e;
+  font-size: 1.45rem;
+}
+
+/* Light-mode counterparts */
+body.light-theme .plain-research-section,
+body.light-theme .build-section {
+  background: #ffffff !important;
+  color: #111514 !important;
+  border-color: #dce2df !important;
+}
+body.light-theme .plain-research-heading h2,
+body.light-theme .build-heading h2,
+body.light-theme .plain-theme-card h3,
+body.light-theme .build-item h3 {
+  color: #111514 !important;
+}
+body.light-theme .plain-research-heading > p:last-child,
+body.light-theme .build-heading > p:last-child,
+body.light-theme .plain-theme-card > p:not(.plain-theme-question),
+body.light-theme .build-item p {
+  color: #5e6763 !important;
+}
+body.light-theme .plain-theme-card {
+  background: #f8faf9 !important;
+  border-color: #dce2df !important;
+}
+body.light-theme .plain-theme-question {
+  color: #1b201e !important;
+}
+body.light-theme .plain-theme-impact {
+  border-color: #dce2df !important;
+}
+body.light-theme .plain-theme-impact span {
+  color: #505a55 !important;
+}
+body.light-theme .plain-theme-number,
+body.light-theme .build-index,
+body.light-theme .build-arrow {
+  color: #747d79 !important;
+}
+
+@media (max-width: 900px) {
+  .plain-theme-grid {
+    grid-template-columns: 1fr;
+  }
+  .build-flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .build-arrow {
+    justify-content: flex-start;
+    padding: 8px 0 8px 24px;
+    transform: rotate(90deg);
+    transform-origin: 36px center;
+  }
+}
+@media (max-width: 600px) {
+  .plain-research-section,
+  .build-section {
+    padding: 78px 0;
+  }
+  .plain-theme-card {
+    padding: 25px 22px;
+  }
+  .plain-theme-impact {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
 }
