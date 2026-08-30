@@ -1425,3 +1425,249 @@ body { background:#080a0a; color:var(--ink); }
 }
 .publications-band .pub-row span:nth-child(2) { font-style:normal; }
 .publications-band .pub-meta { color:#d4dad7; font-style:italic; }
+
+/* ===== Version 9: balanced hero and portrait ===== */
+.container { --max: 1320px; }
+
+.hero {
+  grid-template-columns: minmax(0, 1.58fr) minmax(390px, .92fr);
+  gap: clamp(44px, 5vw, 82px);
+  min-height: 760px;
+  align-items: center;
+}
+
+.hero-copy { min-width: 0; }
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.35rem, 2.4vw, 2.5rem);
+  margin: 1.25rem 0 1rem;
+}
+.hero-identity h1 {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(4.1rem, 6.2vw, 6.35rem);
+  line-height: .89;
+  letter-spacing: -.064em;
+}
+.hero-mark {
+  width: 154px;
+  height: 106px;
+  flex: 0 0 154px;
+}
+.hero-mark i {
+  left: 2px;
+  width: 148px;
+  height: 44px;
+  border-width: 5px;
+}
+.hero-mark .dot-a { left: 41px; top: 48px; width: 11px; height: 11px; }
+.hero-mark .dot-b { left: 73px; top: 45px; width: 14px; height: 14px; }
+.hero-mark .dot-c { left: 108px; top: 49px; width: 9px; height: 9px; }
+.hero-subline {
+  margin-top: .15rem;
+  font-size: clamp(1.45rem, 2vw, 1.95rem) !important;
+  line-height: 1.24;
+}
+.hero-text {
+  max-width: 760px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.interaction-schematic {
+  height: auto !important;
+  min-height: 0;
+  padding: 34px 30px 28px;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 54px minmax(0,1fr) 54px minmax(0,1.08fr);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.schematic-stage {
+  min-width: 0;
+  min-height: 330px;
+  padding: 26px 18px 22px;
+  border-left: 0;
+  border-top: 3px solid;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.schematic-stage > .stage-index {
+  margin-bottom: 24px;
+  color: #929c97;
+}
+.schematic-stage > strong {
+  margin-top: auto;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+.schematic-stage > small {
+  margin-top: 8px;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: #b8c0bd;
+}
+.stage-matrix { border-color: var(--green); }
+.stage-cell { border-color: var(--blue); }
+.stage-multi { border-color: var(--magenta); }
+
+.schematic-link {
+  position: relative;
+  height: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.schematic-link:before {
+  left: 5px;
+  right: 5px;
+  top: 50%;
+}
+.schematic-link i {
+  font-size: 1.35rem;
+  padding: 0 7px;
+}
+.schematic-link b {
+  width: 7px;
+  height: 7px;
+}
+
+.mini-matrix {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  margin-top: 6px;
+}
+.mini-matrix i {
+  position: absolute;
+  left: 2px;
+  width: 95%;
+  height: 34px;
+  border: 2px solid rgba(41,184,117,.68);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+.mini-matrix i:nth-child(1) { top: 8px; }
+.mini-matrix i:nth-child(2) { top: 37px; left: 10px; }
+.mini-matrix i:nth-child(3) { top: 66px; left: 0; }
+
+.cell-symbol {
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 92px;
+  height: 92px;
+  margin: 13px auto 0;
+  flex: 0 0 auto;
+}
+.cell-symbol em {
+  width: 28px;
+  height: 28px;
+  left: 31px;
+  top: 30px;
+}
+.migration-track { display: none; }
+
+.cluster {
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 120px;
+  height: 104px;
+  margin: 10px auto 0;
+  flex: 0 0 auto;
+}
+.cluster i { width: 42px; height: 42px; }
+.cluster i:nth-child(1){left:39px;top:0}
+.cluster i:nth-child(2){left:7px;top:31px}
+.cluster i:nth-child(3){left:72px;top:31px}
+.cluster i:nth-child(4){left:34px;top:57px}
+.cluster i:nth-child(5){left:67px;top:63px;width:31px;height:31px}
+
+.schematic-caption {
+  grid-column: 1 / -1;
+  margin: 24px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #2f3734;
+  color: #aab3af;
+  font-size: .82rem;
+  line-height: 1.55;
+}
+
+.about-portrait {
+  display: block;
+  width: min(100%, 300px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 22px;
+  border: 1px solid #2d3431;
+  background: #111514;
+}
+
+@media (max-width: 1120px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    min-height: auto;
+  }
+  .hero-identity h1 { font-size: clamp(4rem, 9vw, 6rem); }
+  .interaction-schematic {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-identity {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-identity h1 {
+    font-size: clamp(3.15rem, 13vw, 4.7rem);
+  }
+  .hero-mark {
+    width: 94px;
+    height: 68px;
+    flex-basis: 94px;
+  }
+  .hero-mark i {
+    width: 90px;
+    height: 28px;
+    border-width: 3px;
+  }
+  .hero-mark .dot-a { left: 25px; top: 31px; width: 7px; height: 7px; }
+  .hero-mark .dot-b { left: 44px; top: 29px; width: 9px; height: 9px; }
+  .hero-mark .dot-c { left: 66px; top: 32px; width: 6px; height: 6px; }
+  .interaction-schematic {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 28px 24px;
+  }
+  .schematic-stage {
+    min-height: 230px;
+  }
+  .schematic-link {
+    min-height: 58px;
+    height: 58px;
+  }
+  .schematic-link:before {
+    left: 50%; right: auto; top: 5px; bottom: 5px; width: 1px; height: auto;
+  }
+  .schematic-link i { transform: rotate(90deg); }
+  .schematic-caption { grid-column: 1; }
+}
