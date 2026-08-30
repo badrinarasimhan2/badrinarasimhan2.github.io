@@ -1890,3 +1890,34 @@ body { background:#080a0a; color:var(--ink); }
   .hero-mark-v10 .dot-d { left:49px; top:44px; width:6px; height:6px; }
   .hero-mark-v10 .dot-e { left:83px; top:45px; width:6px; height:6px; }
 }
+
+/* ===== Version 12: hero spacing refinement ===== */
+.hero-brand-lockup {
+  margin-bottom: 46px;
+}
+
+.hero-subline-v10 {
+  margin-bottom: 46px !important;
+}
+
+.hero-text-v10 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-brand-lockup {
+    margin-bottom: 34px;
+  }
+  .hero-subline-v10 {
+    margin-bottom: 36px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-brand-lockup {
+    margin-bottom: 28px;
+  }
+  .hero-subline-v10 {
+    margin-bottom: 30px !important;
+  }
+}
