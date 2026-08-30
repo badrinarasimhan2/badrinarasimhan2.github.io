@@ -2334,3 +2334,59 @@ body.light-theme .about-section .about-links a:first-child {
   .hero-mark-v10.distributed-logo .dot-h { left: 87px;  top: 55px; }
   .hero-mark-v10.distributed-logo .dot-i { left: 104px; top: 66px; }
 }
+
+
+/* ===== Version 18: logo dot placement refinement ===== */
+/* Keep all red interaction dots fully inside the white or blue lens regions.
+   Same small size, no dots touching or crossing an arc. */
+
+.hero-mark-v10.distributed-logo .interaction-dot {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+/* Upper white lens */
+.hero-mark-v10.distributed-logo .dot-a { left: 31px;  top: 31px; }
+.hero-mark-v10.distributed-logo .dot-b { left: 67px;  top: 22px; }
+.hero-mark-v10.distributed-logo .dot-c { left: 102px; top: 37px; }
+.hero-mark-v10.distributed-logo .dot-d { left: 137px; top: 23px; }
+.hero-mark-v10.distributed-logo .dot-e { left: 158px; top: 36px; }
+
+/* Lower blue lens */
+.hero-mark-v10.distributed-logo .dot-f { left: 43px;  top: 82px; }
+.hero-mark-v10.distributed-logo .dot-g { left: 86px;  top: 98px; }
+.hero-mark-v10.distributed-logo .dot-h { left: 128px; top: 85px; }
+.hero-mark-v10.distributed-logo .dot-i { left: 156px; top: 103px; }
+
+@media (max-width: 700px) {
+  .hero-mark-v10.distributed-logo .interaction-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .hero-mark-v10.distributed-logo .dot-a { left: 22px;  top: 21px; }
+  .hero-mark-v10.distributed-logo .dot-b { left: 46px;  top: 15px; }
+  .hero-mark-v10.distributed-logo .dot-c { left: 70px;  top: 26px; }
+  .hero-mark-v10.distributed-logo .dot-d { left: 95px;  top: 16px; }
+  .hero-mark-v10.distributed-logo .dot-e { left: 110px; top: 25px; }
+
+  .hero-mark-v10.distributed-logo .dot-f { left: 30px;  top: 57px; }
+  .hero-mark-v10.distributed-logo .dot-g { left: 59px;  top: 68px; }
+  .hero-mark-v10.distributed-logo .dot-h { left: 88px;  top: 59px; }
+  .hero-mark-v10.distributed-logo .dot-i { left: 108px; top: 71px; }
+}
+
+
+/* ===== Version 19: brand, dark default, multicolor nodes ===== */
+.hero-mark-v10.distributed-logo .dot-c {
+  background: #29b875 !important;
+}
+.hero-mark-v10.distributed-logo .dot-h {
+  background: #9a78d2 !important;
+}
+body.light-theme .hero-mark-v10.distributed-logo .dot-c {
+  background: #29b875 !important;
+}
+body.light-theme .hero-mark-v10.distributed-logo .dot-h {
+  background: #9a78d2 !important;
+}

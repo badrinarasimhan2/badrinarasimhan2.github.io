@@ -108,7 +108,7 @@
 
       let light = false;
       try {
-        light = localStorage.getItem('badri-site-theme') === 'light';
+        light = localStorage.getItem('badri-site-theme-v19') === 'light';
       } catch (e) {}
       applyTheme(light);
 
@@ -116,7 +116,7 @@
         const nextLight = !document.body.classList.contains('light-theme');
         applyTheme(nextLight);
         try {
-          localStorage.setItem('badri-site-theme', nextLight ? 'light' : 'dark');
+          localStorage.setItem('badri-site-theme-v19', nextLight ? 'light' : 'dark');
         } catch (e) {}
       });
     })();

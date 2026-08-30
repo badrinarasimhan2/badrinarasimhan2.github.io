@@ -37,7 +37,7 @@
       <div class="hero-copy hero-copy-v10">
         <p class="eyebrow interaction-eyebrow">BIOMATERIALS · MECHANOBIOLOGY · CELL MIGRATION</p>
 
-        <div class="hero-brand-lockup" aria-label="Interaction Bioengineering">
+        <div class="hero-brand-lockup" aria-label="Interactions Bioengineering">
           <span class="interaction-mark hero-mark-v10 distributed-logo" aria-hidden="true">
         <i></i><i></i>
         <b class="interaction-dot dot-a"></b>
@@ -453,7 +453,7 @@
 
       let light = false;
       try {
-        light = localStorage.getItem('badri-site-theme') === 'light';
+        light = localStorage.getItem('badri-site-theme-v19') === 'light';
       } catch (e) {}
       applyTheme(light);
 
@@ -461,7 +461,7 @@
         const nextLight = !document.body.classList.contains('light-theme');
         applyTheme(nextLight);
         try {
-          localStorage.setItem('badri-site-theme', nextLight ? 'light' : 'dark');
+          localStorage.setItem('badri-site-theme-v19', nextLight ? 'light' : 'dark');
         } catch (e) {}
       });
     })();
