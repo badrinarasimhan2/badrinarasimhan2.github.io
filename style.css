@@ -1261,3 +1261,97 @@ footer p {
 .interaction-mark i:first-child { top:0; color:var(--accent); }
 .interaction-mark i:last-child { bottom:0; color:var(--blue); }
 @media (max-width: 680px) { .interaction-theme { align-items:flex-start; } }
+
+/* Version 7: dark identity and large Interaction Bioengineering theme */
+:root {
+  --bg: #080a0a;
+  --surface: #111514;
+  --ink: #f5f7f6;
+  --muted: #a7afac;
+  --line: #2a302e;
+  --red: #e55353;
+}
+body { background:#080a0a; color:var(--ink); }
+.site-header { background:rgba(8,10,10,.91); border-bottom-color:#242927; }
+.button.primary { background:#f5f7f6; color:#0a0c0b; border-color:#f5f7f6; }
+.button.secondary { border-color:#737b78; color:#f5f7f6; }
+.hero-visual {
+  background:
+    radial-gradient(circle at 22% 24%, rgba(41,184,117,.16), transparent 24%),
+    radial-gradient(circle at 76% 30%, rgba(39,135,200,.18), transparent 25%),
+    radial-gradient(circle at 68% 78%, rgba(165,33,103,.16), transparent 26%),
+    #101514;
+}
+.matrix { border-color:rgba(255,255,255,.16); }
+.matrix::before,.matrix::after { border-color:rgba(255,255,255,.10); }
+.signal-line { background:rgba(255,255,255,.34); }
+.project-card,.expertise-grid article,.about-card,.pub-row,.theme-card { background:var(--surface); }
+.selected-work,.expertise-section,.about-section,.publications-band,.research-themes { background:#080a0a; }
+
+.interaction-eyebrow span { color:var(--green); }
+.interaction-theme {
+  width:100%;
+  margin-top:2.6rem;
+  padding:2.1rem 0 0;
+  gap:2rem;
+  border-top:1px solid #303735;
+  align-items:center;
+}
+.interaction-theme strong {
+  display:block;
+  font-family:Manrope,sans-serif;
+  font-size:clamp(2.5rem,4.6vw,4.7rem);
+  line-height:.98;
+  letter-spacing:-.055em;
+  font-weight:750;
+  color:#f7f9f8;
+}
+.interaction-theme small {
+  display:block;
+  color:#aab2af;
+  margin-top:.8rem;
+  font-size:clamp(1.05rem,1.55vw,1.45rem);
+  line-height:1.35;
+}
+.interaction-mark {
+  position:relative;
+  width:138px;
+  height:94px;
+  display:block;
+  flex:0 0 138px;
+}
+.interaction-mark i {
+  position:absolute;
+  left:2px;
+  width:132px;
+  height:39px;
+  border:5px solid currentColor;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  border-radius:50%;
+}
+.interaction-mark i:first-child { top:3px; color:#f2f5f4; }
+.interaction-mark i:nth-child(2) { bottom:3px; color:#3c9ee8; }
+.interaction-dot {
+  position:absolute;
+  z-index:2;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 3px rgba(229,83,83,.09);
+}
+.interaction-mark .dot-a { left:37px; top:42px; }
+.interaction-mark .dot-b { left:65px; top:39px; width:13px; height:13px; }
+.interaction-mark .dot-c { left:94px; top:43px; width:9px; height:9px; }
+
+@media (max-width:680px) {
+  .interaction-theme { align-items:flex-start; gap:1.1rem; }
+  .interaction-mark { width:86px; height:62px; flex-basis:86px; margin-top:.15rem; }
+  .interaction-mark i { width:82px; height:25px; border-width:3px; }
+  .interaction-dot { width:7px; height:7px; }
+  .interaction-mark .dot-a { left:23px; top:28px; }
+  .interaction-mark .dot-b { left:41px; top:26px; width:8px; height:8px; }
+  .interaction-mark .dot-c { left:59px; top:28px; width:6px; height:6px; }
+  .interaction-theme strong { font-size:clamp(2rem,10vw,3rem); }
+}
