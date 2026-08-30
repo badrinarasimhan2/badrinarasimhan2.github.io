@@ -922,3 +922,342 @@ footer p {
 @media(max-width:600px){
  .service-list>div{grid-template-columns:1fr;gap:7px}
 }
+
+
+/* ===== Version 5.1: state-space redesign ===== */
+.state-space-v51 {
+  padding: 112px 0 98px;
+  background: #141817;
+  color: #f7f8f7;
+}
+
+.state-space-v51 .section-kicker {
+  color: #65d5a0;
+}
+
+.state-space-v51 .state-title-row {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 90px;
+  align-items: end;
+  margin: 0 0 62px;
+}
+
+.state-space-v51 .state-title-row h2 {
+  margin: 16px 0 0;
+  max-width: 760px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.65rem, 4.7vw, 4.9rem);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+  color: #fff;
+}
+
+.state-space-v51 .state-intro {
+  max-width: 650px;
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #aeb6b2;
+}
+
+.state-canvas {
+  display: grid;
+  grid-template-columns: 1.15fr 92px 1fr 92px 1.08fr;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.state-panel {
+  position: relative;
+  min-height: 338px;
+  padding: 28px 28px 26px;
+  border: 1px solid #343b38;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+  overflow: hidden;
+}
+
+.state-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.panel-ecm::before { background: #28b979; }
+.panel-cell::before { background: #2f8dca; }
+.panel-multi::before { background: #b0236c; }
+
+.panel-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7e8984;
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.state-index {
+  color: #d5dbd8;
+}
+
+.state-domain::before {
+  content: "/";
+  margin-right: 10px;
+  color: #58615d;
+}
+
+.state-panel h3 {
+  margin: 33px 0 25px;
+  max-width: 340px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.72rem;
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
+
+.state-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.state-tags span {
+  padding: 8px 11px;
+  border: 1px solid #39413e;
+  border-radius: 999px;
+  color: #b9c1bd;
+  font-size: .84rem;
+  line-height: 1;
+  background: rgba(255,255,255,.018);
+}
+
+.coupling-box {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #333b37;
+}
+
+.coupling-box small {
+  display: block;
+  margin-bottom: 9px;
+  color: #748079;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.coupling-box div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: .88rem;
+}
+
+.coupling-box strong {
+  color: #eef2f0;
+}
+
+.coupling-box i {
+  color: #36c887;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.flow-bridge {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  min-width: 0;
+  color: #737d78;
+}
+
+.flow-bridge > span {
+  text-align: center;
+  font-size: .57rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.bridge-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.bridge-line b {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: #49524e;
+}
+
+.bridge-line i {
+  margin-left: -2px;
+  color: #919b96;
+  font-size: 1.42rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+.state-bottomline {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 28px;
+  align-items: baseline;
+  margin-top: 30px;
+  padding: 22px 0 0;
+  border-top: 1px solid #303734;
+}
+
+.state-bottomline span {
+  color: #5fcf98;
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.state-bottomline p {
+  max-width: 930px;
+  margin: 0;
+  color: #d9dfdc;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+/* Editorial service: restrained, factual */
+.service-section {
+  padding-top: 100px;
+  padding-bottom: 95px;
+}
+
+.service-head {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.service-head .section-kicker {
+  margin: 0 0 7px;
+}
+
+.service-head h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.15rem, 3.5vw, 3.7rem);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+.service-list > div {
+  grid-template-columns: minmax(250px, .72fr) 1.4fr;
+}
+
+/* Selected publications: slightly tighter and easier to scan */
+.publications-band .pub-list {
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+.publications-band .pub-row {
+  grid-template-columns: 92px 1fr 34px;
+  padding: 22px 4px;
+}
+
+.publications-band .pub-row strong {
+  font-size: 1.01rem;
+  line-height: 1.38;
+}
+
+.publications-band .pub-row span:nth-child(2) {
+  line-height: 1.55;
+}
+
+@media (max-width: 1000px) {
+  .state-space-v51 .state-title-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .state-canvas {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-bridge {
+    min-height: 58px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .flow-bridge > span {
+    display: none;
+  }
+
+  .bridge-line {
+    width: 46px;
+    transform: rotate(90deg);
+  }
+
+  .state-panel {
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 650px) {
+  .state-space-v51 {
+    padding: 82px 0 70px;
+  }
+
+  .state-panel {
+    padding: 24px;
+  }
+
+  .coupling-box {
+    left: 24px;
+    right: 24px;
+  }
+
+  .state-bottomline {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .service-head {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .publications-band .pub-row {
+    grid-template-columns: 58px 1fr 20px;
+  }
+}
+
+
+/* Version 6: Interaction Bioengineering identity */
+.interaction-eyebrow span { color: var(--accent); font-weight: 700; }
+.interaction-eyebrow b { color: var(--muted); padding: 0 .25rem; }
+.interaction-theme {
+  margin-top: 1.6rem; display: inline-flex; align-items: center; gap: .9rem;
+  padding-top: 1rem; border-top: 1px solid var(--line);
+}
+.interaction-theme strong { display:block; font-family: Manrope, sans-serif; font-size:.95rem; letter-spacing:.02em; }
+.interaction-theme small { display:block; color:var(--muted); margin-top:.18rem; font-size:.78rem; }
+.interaction-mark { position:relative; width:42px; height:28px; display:block; flex:0 0 42px; }
+.interaction-mark i { position:absolute; left:0; width:42px; height:12px; border:2px solid currentColor; border-left-color:transparent; border-right-color:transparent; border-radius:50%; }
+.interaction-mark i:first-child { top:0; color:var(--accent); }
+.interaction-mark i:last-child { bottom:0; color:var(--blue); }
+@media (max-width: 680px) { .interaction-theme { align-items:flex-start; } }

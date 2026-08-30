@@ -31,14 +31,18 @@
   <main id="top">
     <section class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow">BIOENGINEERING · BIOMATERIALS · MECHANOBIOLOGY</p>
+        <p class="eyebrow interaction-eyebrow"><span>INTERACTION BIOENGINEERING</span><b>·</b> BIOMATERIALS · MECHANOBIOLOGY</p>
         <h1>Engineering dynamic<br>extracellular matrices.</h1>
         <p class="hero-subline">to understand how microenvironments shape cellular organization.</p>
         <p class="hero-text">
-          I study how extracellular matrix remodeling, including degradation, together with
-          adhesion and mechanics shapes cellular behavior, multicellular organization,
+          I study how interactions among extracellular matrix remodeling, adhesion, mechanics,
+          and biological systems shape cell migration, cellular behavior, multicellular organization,
           and disease-relevant states.
         </p>
+        <div class="interaction-theme" aria-label="Interaction Bioengineering research theme">
+          <span class="interaction-mark" aria-hidden="true"><i></i><i></i></span>
+          <div><strong>Interaction Bioengineering</strong><small>Engineering and decoding interactions across scales.</small></div>
+        </div>
 
         <div class="hero-actions">
           <a class="button primary" href="#research">Explore research</a>
@@ -70,9 +74,9 @@
 
         <div class="vision-copy">
           <p>
-            Cells do not experience static environments. My research seeks to define how
-            dynamic extracellular cues are sensed, integrated, and translated into changes
-            in cell behavior and tissue organization.
+            Biological systems emerge from interactions across scales. My research seeks to define how
+            dynamic material and extracellular cues are sensed, integrated, and translated into changes
+            in migration, cell state, multicellular organization, and tissue behavior.
           </p>
           <p>
             These principles are then reconstructed in engineered microenvironments to
@@ -131,40 +135,80 @@
       </div>
     </section>
 
-    <section class="state-space-band">
-<div class="container">
-  <p class="section-kicker">DYNAMIC STATE-SPACE FRAMEWORK</p>
-  <div class="state-title-row">
-    <h2>From coupled matrix properties<br>to biological state transitions.</h2>
-    <p>My research asks how the physical, structural, and biochemical dimensions of the extracellular matrix are interrelated, and how transitions within this dynamic ECM state space map to cellular and multicellular states.</p>
-  </div>
+    <section class="state-space-band state-space-v51">
+  <div class="container">
+    <div class="state-title-row">
+      <div>
+        <p class="section-kicker">DYNAMIC STATE-SPACE FRAMEWORK</p>
+        <h2>From coupled matrix properties<br>to biological state transitions.</h2>
+      </div>
+      <p class="state-intro">My research asks how the physical, structural, and biochemical dimensions of the extracellular matrix are interrelated, and how transitions within this dynamic ECM state space map to cellular and multicellular states.</p>
+    </div>
 
-  <div class="state-map">
-    <div class="state-node state-ecm">
-      <span>01 / MATRIX</span>
-      <h3>ECM state space</h3>
-      <p>Architecture<br>Mechanics<br>Adhesion<br>Remodeling<br>Confinement</p>
-      <div class="relation-note">
-        <small>COUPLED RELATIONSHIP</small>
-        <strong>Degradation <i>→</i> stress relaxation</strong>
+    <div class="state-canvas">
+      <div class="state-panel panel-ecm">
+        <div class="panel-topline">
+          <span class="state-index">01</span>
+          <span class="state-domain">MATRIX</span>
+        </div>
+        <h3>ECM state space</h3>
+        <div class="state-tags">
+          <span>Architecture</span>
+          <span>Mechanics</span>
+          <span>Adhesion</span>
+          <span>Remodeling</span>
+          <span>Confinement</span>
+        </div>
+        <div class="coupling-box">
+          <small>COUPLED MATRIX PROPERTY</small>
+          <div><strong>Degradation</strong><i>→</i><strong>Stress relaxation</strong></div>
+        </div>
+      </div>
+
+      <div class="flow-bridge" aria-hidden="true">
+        <span>STATE TRANSITION</span>
+        <div class="bridge-line"><b></b><i>→</i></div>
+      </div>
+
+      <div class="state-panel panel-cell">
+        <div class="panel-topline">
+          <span class="state-index">02</span>
+          <span class="state-domain">CELL</span>
+        </div>
+        <h3>Cell state space</h3>
+        <div class="state-tags">
+          <span>Morphology</span>
+          <span>Signaling</span>
+          <span>Migration</span>
+          <span>Phenotype</span>
+        </div>
+      </div>
+
+      <div class="flow-bridge" aria-hidden="true">
+        <span>STATE TRANSITION</span>
+        <div class="bridge-line"><b></b><i>→</i></div>
+      </div>
+
+      <div class="state-panel panel-multi">
+        <div class="panel-topline">
+          <span class="state-index">03</span>
+          <span class="state-domain">COLLECTIVE</span>
+        </div>
+        <h3>Multicellular state space</h3>
+        <div class="state-tags">
+          <span>Organization</span>
+          <span>Collective behavior</span>
+          <span>Tissue architecture</span>
+          <span>Immune interactions</span>
+        </div>
       </div>
     </div>
-    <div class="state-connector"><span>maps to</span><b>→</b></div>
-    <div class="state-node state-cell">
-      <span>02 / CELL</span>
-      <h3>Cell state space</h3>
-      <p>Morphology<br>Signaling<br>Migration<br>Phenotype</p>
-    </div>
-    <div class="state-connector"><span>maps to</span><b>→</b></div>
-    <div class="state-node state-multi">
-      <span>03 / COLLECTIVE</span>
-      <h3>Multicellular state space</h3>
-      <p>Organization<br>Collective behavior<br>Tissue architecture<br>Immune interactions</p>
+
+    <div class="state-bottomline">
+      <span>CORE QUESTION</span>
+      <p>How do transitions within a dynamic ECM state space drive transitions in cellular and multicellular states?</p>
     </div>
   </div>
-
-  <p class="state-question"><strong>Central question:</strong> How do transitions within a dynamic ECM state space drive transitions in cellular and multicellular states?</p>
-</div>
 </section>
 
     <section id="work" class="section container selected-work">
@@ -272,8 +316,9 @@
     <article><span>01</span><h3>Mechanical characterization</h3><p>AFM · rheology · stress relaxation · viscoelasticity · mechanical testing</p></article>
     <article><span>02</span><h3>Multiscale structure</h3><p>SANS · USANS · scattering · FTIR · SEM · structure-property analysis</p></article>
     <article><span>03</span><h3>Microscopy &amp; imaging</h3><p>Confocal · fluorescence · live-cell · time-resolved · 3D imaging · quantitative image analysis</p></article>
-    <article><span>04</span><h3>Biomaterials &amp; biological models</h3><p>Synthetic hydrogels · collagen matrices · degradable biomaterials · 3D culture · organoid models</p></article>
-    <article><span>05</span><h3>Quantitative &amp; spatial approaches</h3><p>Quantitative modeling · image-based phenotyping · multivariate analysis · multimodal integration · spatial profiling</p></article>
+    <article><span>04</span><h3>Cell migration &amp; biological models</h3><p>Cell migration · migration phenotyping · live-cell tracking · 3D culture · organoid models · cell-matrix interactions</p></article>
+    <article><span>05</span><h3>Biomaterials engineering</h3><p>Synthetic hydrogels · collagen matrices · degradable biomaterials · dynamic matrices · cell-instructive materials</p></article>
+    <article><span>06</span><h3>Quantitative &amp; spatial approaches</h3><p>Quantitative modeling · image-based phenotyping · multivariate analysis · multimodal integration · spatial profiling</p></article>
   </div>
 </section>
 
@@ -297,9 +342,9 @@
 </section>
 
 <section class="section container service-section">
-  <div class="section-heading compact-heading">
-    <p class="section-kicker">EDITORIAL &amp; SCIENTIFIC SERVICE</p>
-    <h2>Contributing to the biomaterials community.</h2>
+  <div class="service-head">
+    <p class="section-kicker">SERVICE</p>
+    <h2>Editorial &amp; Scientific Service</h2>
   </div>
   <div class="service-list">
     <div><strong>Early Career Editorial Board</strong><span>Biomimetics · 2026</span></div>
@@ -315,6 +360,11 @@
           <h2>Selected publications.</h2>
         </div>
         <div class="pub-list">
+          <a class="pub-row" href="https://www.biorxiv.org/content/10.64898/2025.12.23.696323v3" target="_blank" rel="noopener">
+            <span class="pub-year">2026</span>
+            <span><strong>Single-cell chiral symmetry breaking under confinement</strong><br>Echeverria-Alar, S., Narasimhan, B. N., Fraley, S. I. &amp; Rappel, W.-J. · Proceedings of the National Academy of Sciences · Accepted</span>
+            <span class="pub-arrow">↗</span>
+          </a>
           <a class="pub-row" href="https://www.pnas.org/doi/full/10.1073/pnas.2416771122" target="_blank" rel="noopener">
             <span class="pub-year">2025</span>
             <span><strong>Matrix degradation enhances stress relaxation, regulating cell adhesion and spreading</strong><br>Narasimhan, B. N. &amp; Fraley, S. I. · Proceedings of the National Academy of Sciences</span>
@@ -330,24 +380,22 @@
             <span><strong>Hydrogen bonding dissipating hydrogels: The influence of network structure design on structure-property relationships</strong><br>Narasimhan, B. N. et al. · Journal of Colloid and Interface Science</span>
             <span class="pub-arrow">↗</span>
           </a>
+          <a class="pub-row" href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202201249" target="_blank" rel="noopener">
+            <span class="pub-year">2022</span>
+            <span><strong>DNA-Engineered Hydrogels with Light-Adaptive Plasmonic Responses</strong><br>Ryssy, J., Lehtonen, A. J., Loo, J., Nguyen, M.-K., Seitsonen, J., Huang, Y., Narasimhan, B. N. et al. · Advanced Functional Materials</span>
+            <span class="pub-arrow">↗</span>
+          </a>
           <a class="pub-row" href="https://pubs.rsc.org/en/content/articlelanding/2021/na/d1na00103e" target="_blank" rel="noopener">
             <span class="pub-year">2021</span>
             <span><strong>A comparative study of tough hydrogen bonding dissipating hydrogels made with different network structures</strong><br>Narasimhan, B. N. et al. · Nanoscale Advances</span>
             <span class="pub-arrow">↗</span>
           </a>
-                  <a class="pub-row" href="https://pubs.rsc.org/en/content/articlelanding/2021/na/d1na00103e" target="_blank" rel="noopener">
-            <span class="pub-year">2021</span>
-            <span><strong>A comparative study of tough hydrogen bonding dissipating hydrogels made with different network structures</strong><br>Narasimhan, B. N. et al. · Nanoscale Advances</span><span class="pub-arrow">↗</span>
-          </a>
           <a class="pub-row" href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/anbr.202100059" target="_blank" rel="noopener">
             <span class="pub-year">2021</span>
-            <span><strong>Hydrogels with Tunable Physical Cues and Their Emerging Roles in Studies of Cellular Mechanotransduction</strong><br>Narasimhan, B. N., Horrocks, M. S. &amp; Malmström, J. · Advanced NanoBiomed Research · Review</span><span class="pub-arrow">↗</span>
+            <span><strong>Hydrogels with tunable physical cues in cellular mechanotransduction</strong><br>Narasimhan, B. N. et al. · Advanced NanoBiomed Research · Review</span>
+            <span class="pub-arrow">↗</span>
           </a>
-          <a class="pub-row" href="https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2020.595978/full" target="_blank" rel="noopener">
-            <span class="pub-year">2020</span>
-            <span><strong>Mechanical Characterization for Cellular Mechanobiology: Current Trends and Future Prospects</strong><br>Narasimhan, B. N. et al. · Frontiers in Bioengineering and Biotechnology · Mini Review</span><span class="pub-arrow">↗</span>
-          </a>
-</div>
+        </div>
         <a class="button button-secondary pub-button" href="publications.html">View all publications</a>
       </div>
     </section>
