@@ -1849,3 +1849,44 @@ body { background:#080a0a; color:var(--ink); }
     width: min(72vw, 260px) !important;
   }
 }
+
+
+/* ===== Version 11: interaction mark, publication completeness, contrast fixes ===== */
+.hero-mark-v10 .dot-d { left: 69px; top: 61px; width: 8px; height: 8px; }
+.hero-mark-v10 .dot-e { left: 119px; top: 62px; width: 9px; height: 9px; }
+
+/* The collaborative selected-work card is a light surface, so its copy must be dark. */
+.collab-project { color:#151918 !important; }
+.collab-project .project-copy h3 { color:#151918 !important; }
+.collab-project .project-copy > p:not(.project-meta) { color:#4e5853 !important; }
+.collab-project .project-meta { color:#6d7671 !important; }
+.collab-project .text-link { color:#151918 !important; border-bottom-color:#8d9691 !important; }
+
+/* Full publications page */
+.publication-section { padding-top:72px; padding-bottom:36px; }
+.publication-secondary { padding-top:58px; }
+.book-section { padding-bottom:110px; }
+.publication-group-heading { margin-bottom:28px; max-width:820px; }
+.publication-group-heading h2 {
+  font-family:"Manrope",sans-serif;
+  color:#f7f9f8;
+  font-size:clamp(2rem,4vw,3.6rem);
+  line-height:1;
+  letter-spacing:-.045em;
+  margin:8px 0 0;
+}
+.full-pub { color:#f7f9f8; }
+.full-pub-year { color:#aeb7b2; }
+.full-pub h3 { color:#f7f9f8; line-height:1.35; }
+.full-pub h3 a { color:#f7f9f8; }
+.full-pub p { color:#c7cfcb; line-height:1.55; }
+.full-pub .journal { color:#9fa9a4; }
+
+@media (max-width:900px) {
+  .hero-mark-v10 .dot-d { left:53px; top:48px; width:7px; height:7px; }
+  .hero-mark-v10 .dot-e { left:91px; top:49px; width:7px; height:7px; }
+}
+@media (max-width:700px) {
+  .hero-mark-v10 .dot-d { left:49px; top:44px; width:6px; height:6px; }
+  .hero-mark-v10 .dot-e { left:83px; top:45px; width:6px; height:6px; }
+}
