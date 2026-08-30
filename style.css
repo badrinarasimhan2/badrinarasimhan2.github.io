@@ -1671,3 +1671,181 @@ body { background:#080a0a; color:var(--ink); }
   .schematic-link i { transform: rotate(90deg); }
   .schematic-caption { grid-column: 1; }
 }
+
+/* ===== Version 10: clean hero + compact about ===== */
+.hero.hero-v10 {
+  display: block;
+  min-height: 720px;
+  padding-top: clamp(110px, 12vw, 165px);
+  padding-bottom: clamp(100px, 11vw, 150px);
+}
+
+.hero-copy-v10 {
+  width: min(100%, 1080px);
+}
+
+.hero-brand-lockup {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 56px);
+  margin: 26px 0 18px;
+}
+
+.hero-brand-lockup h1 {
+  margin: 0;
+  max-width: none;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(4.2rem, 7.4vw, 7.1rem);
+  line-height: .84;
+  letter-spacing: -.068em;
+}
+
+.hero-brand-lockup h1 span {
+  display: block;
+}
+
+.hero-mark-v10 {
+  position: relative;
+  display: block;
+  width: 190px;
+  height: 130px;
+}
+
+.hero-mark-v10 i {
+  position: absolute;
+  left: 3px;
+  width: 184px;
+  height: 55px;
+  border: 5px solid #f4f6f5;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+.hero-mark-v10 i:first-child { top: 7px; }
+.hero-mark-v10 i:nth-child(2) {
+  top: 69px;
+  border-color: #2d91d1;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.hero-mark-v10 .interaction-dot {
+  position: absolute;
+  top: 58px;
+  display: block;
+  border-radius: 50%;
+  background: #ef5357;
+  box-shadow: 0 0 0 3px rgba(239,83,87,.08);
+}
+.hero-mark-v10 .dot-a { left: 48px; width: 14px; height: 14px; }
+.hero-mark-v10 .dot-b { left: 89px; top: 54px; width: 18px; height: 18px; }
+.hero-mark-v10 .dot-c { left: 137px; width: 13px; height: 13px; }
+
+.hero-subline-v10 {
+  margin: 0 0 24px !important;
+  max-width: 900px;
+  font-size: clamp(1.45rem, 2.2vw, 2rem) !important;
+  line-height: 1.25;
+  color: #e5e9e7 !important;
+}
+
+.hero-text-v10 {
+  max-width: 850px;
+  color: #bdc5c1 !important;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+/* Compact about section: portrait supports the text instead of dominating it. */
+.about-section {
+  grid-template-columns: minmax(220px, 290px) minmax(0, 1fr) !important;
+  gap: clamp(42px, 6vw, 82px) !important;
+  align-items: start;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-label {
+  min-width: 0;
+}
+
+.about-portrait {
+  width: 100% !important;
+  max-width: 280px !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover;
+  object-position: center 34%;
+  border-radius: 18px;
+}
+
+.about-copy {
+  max-width: 760px;
+}
+
+.about-copy h2 {
+  font-size: clamp(2.3rem, 4.4vw, 4rem) !important;
+  line-height: .98;
+  margin-bottom: 24px;
+}
+
+.about-copy p {
+  max-width: 690px;
+}
+
+@media (max-width: 900px) {
+  .hero.hero-v10 {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .hero-brand-lockup {
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 28px;
+  }
+  .hero-brand-lockup h1 {
+    font-size: clamp(3.7rem, 10vw, 5.5rem);
+  }
+  .hero-mark-v10 {
+    width: 145px;
+    height: 100px;
+  }
+  .hero-mark-v10 i {
+    width: 140px;
+    height: 42px;
+    border-width: 4px;
+  }
+  .hero-mark-v10 i:first-child { top: 6px; }
+  .hero-mark-v10 i:nth-child(2) { top: 54px; }
+  .hero-mark-v10 .dot-a { left: 37px; top: 45px; width: 10px; height: 10px; }
+  .hero-mark-v10 .dot-b { left: 68px; top: 42px; width: 14px; height: 14px; }
+  .hero-mark-v10 .dot-c { left: 105px; top: 45px; width: 10px; height: 10px; }
+}
+
+@media (max-width: 700px) {
+  .hero-brand-lockup {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hero-brand-lockup h1 {
+    font-size: clamp(3.35rem, 15vw, 4.6rem);
+  }
+  .hero-mark-v10 {
+    width: 132px;
+    height: 90px;
+  }
+  .hero-mark-v10 i { width: 128px; height: 38px; }
+  .hero-mark-v10 i:nth-child(2) { top: 49px; }
+  .hero-mark-v10 .dot-a { left: 33px; top: 41px; }
+  .hero-mark-v10 .dot-b { left: 62px; top: 38px; }
+  .hero-mark-v10 .dot-c { left: 96px; top: 41px; }
+
+  .about-section {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .about-portrait {
+    width: min(72vw, 260px) !important;
+  }
+}
