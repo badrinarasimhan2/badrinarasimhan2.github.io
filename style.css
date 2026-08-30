@@ -2711,3 +2711,100 @@ body.light-theme .theme-card .theme-impact {
     gap: 7px;
   }
 }
+
+
+/* ===== Version 22: finalized research themes + theme-aware emerging directions ===== */
+
+/* Dark mode: Emerging Research Directions follows the site's dark visual system. */
+body:not(.light-theme) .emerging-section {
+  background: #0c0f0e !important;
+  color: #f4f6f5 !important;
+  border-top: 1px solid #252b28;
+  border-bottom: 1px solid #252b28;
+}
+
+body:not(.light-theme) .emerging-section .section-kicker {
+  color: #8f9994 !important;
+}
+
+body:not(.light-theme) .emerging-section .section-heading h2 {
+  color: #f7f9f8 !important;
+}
+
+body:not(.light-theme) .emerging-section .section-heading > p:last-child {
+  color: #aeb7b2 !important;
+}
+
+body:not(.light-theme) .emerging-section .direction-card {
+  background: #111513 !important;
+  border-color: #303734 !important;
+}
+
+body:not(.light-theme) .emerging-section .direction-card > span {
+  color: #31b97a !important;
+}
+
+body:not(.light-theme) .emerging-section .direction-card h3 {
+  color: #f4f6f5 !important;
+}
+
+body:not(.light-theme) .emerging-section .direction-card p {
+  color: #aeb7b2 !important;
+}
+
+body:not(.light-theme) .emerging-section .research-loop {
+  color: #f4f6f5 !important;
+  border-top-color: #303734 !important;
+  border-bottom-color: #303734 !important;
+}
+
+body:not(.light-theme) .emerging-section .research-loop i {
+  color: #31b97a !important;
+}
+
+/* Light mode: retain a crisp light treatment with appropriate contrast. */
+body.light-theme .emerging-section {
+  background: #f0f3f1 !important;
+  color: #151918 !important;
+  border-top: 1px solid #d9dfdc;
+  border-bottom: 1px solid #d9dfdc;
+}
+
+body.light-theme .emerging-section .section-kicker {
+  color: #68716d !important;
+}
+
+body.light-theme .emerging-section .section-heading h2 {
+  color: #151918 !important;
+}
+
+body.light-theme .emerging-section .section-heading > p:last-child {
+  color: #555f5a !important;
+}
+
+body.light-theme .emerging-section .direction-card {
+  background: #ffffff !important;
+  border-color: #aeb7b2 !important;
+}
+
+body.light-theme .emerging-section .direction-card > span {
+  color: #29b875 !important;
+}
+
+body.light-theme .emerging-section .direction-card h3 {
+  color: #171b19 !important;
+}
+
+body.light-theme .emerging-section .direction-card p {
+  color: #4e5853 !important;
+}
+
+body.light-theme .emerging-section .research-loop {
+  color: #1b201e !important;
+  border-top-color: #cbd2ce !important;
+  border-bottom-color: #cbd2ce !important;
+}
+
+body.light-theme .emerging-section .research-loop i {
+  color: #29b875 !important;
+}
