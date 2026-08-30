@@ -2390,3 +2390,8 @@ body.light-theme .hero-mark-v10.distributed-logo .dot-c {
 body.light-theme .hero-mark-v10.distributed-logo .dot-h {
   background: #9a78d2 !important;
 }
+.hero-subline-v10 {
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 400;
+}
