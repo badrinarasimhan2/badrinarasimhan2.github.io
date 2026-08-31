@@ -2847,3 +2847,65 @@ body.light-theme .emerging-section .research-loop i {
     height: 230px !important;
   }
 }
+
+
+/* ===== Version 24: preserve complete scientific figures ===== */
+/* Scientific figures should never be cropped. White figure panels make
+   unused aspect-ratio space intentional rather than gray. */
+.selected-work .project-image,
+.selected-work .collab-image {
+  background: #ffffff !important;
+}
+
+.selected-work .project-image img,
+.selected-work .collab-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Give wide schematics enough vertical space to remain legible without cropping. */
+.selected-work .project-image-large {
+  height: 350px !important;
+}
+
+.selected-work .project-card .project-image {
+  height: 270px !important;
+}
+
+.selected-work .collab-image {
+  height: 300px !important;
+}
+
+/* The white figure panel remains white in both themes. */
+body:not(.light-theme) .selected-work .project-image,
+body:not(.light-theme) .selected-work .collab-image,
+body.light-theme .selected-work .project-image,
+body.light-theme .selected-work .collab-image {
+  background: #ffffff !important;
+}
+
+@media (max-width: 850px) {
+  .selected-work .project-image-large,
+  .selected-work .project-card .project-image,
+  .selected-work .collab-image {
+    height: auto !important;
+    min-height: 240px !important;
+  }
+
+  .selected-work .project-image img,
+  .selected-work .collab-image img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .selected-work .project-image-large,
+  .selected-work .project-card .project-image,
+  .selected-work .collab-image {
+    min-height: 190px !important;
+  }
+}
