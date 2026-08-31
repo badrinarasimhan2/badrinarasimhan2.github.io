@@ -2808,3 +2808,42 @@ body.light-theme .emerging-section .research-loop {
 body.light-theme .emerging-section .research-loop i {
   color: #29b875 !important;
 }
+
+
+/* ===== Version 23: project images fill their frames ===== */
+.selected-work .project-image img,
+.selected-work .collab-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.selected-work .project-image-large {
+  height: 330px !important;
+}
+
+.selected-work .project-card .project-image {
+  height: 260px !important;
+}
+
+.selected-work .collab-image {
+  height: 300px !important;
+}
+
+@media (max-width: 850px) {
+  .selected-work .project-image-large,
+  .selected-work .project-card .project-image,
+  .selected-work .collab-image {
+    height: 280px !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .selected-work .project-image-large,
+  .selected-work .project-card .project-image,
+  .selected-work .collab-image {
+    height: 230px !important;
+  }
+}
